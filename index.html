@@ -1,0 +1,1546 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org"
+      xmlns:esi="http://www.edge-delivery.org/esi/1.0">
+<head>
+    <title>DISC test</title>
+    <meta charset="utf-8"/>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Chart.bundle.min.js"></script>
+
+    <script src="js/jquery.localisation.js"></script>
+    <script src="js/languages.js"></script>
+
+    <script src="js/home.js"></script>
+    <link href="css/home.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div id="main">
+    <div id="header"></div>
+    <div id="content">
+        <div class="test-content">
+            <div class="button-container">
+                <div class="language-button-container">
+                    <span class="flag-icon flag-icon-en language-button language-button-english" id="en"></span>
+                    <span class="flag-icon flag-icon-pl language-button language-button-polish" id="pl"></span>
+                </div>
+            </div>
+            <div class="test-container">
+                <div class="test-box">
+                    <div class="question-box-row">
+                        <div class="question-box box0">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box0_question0">Ufna, entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="2"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="2"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box0_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="4"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="4"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box0_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="5"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="1"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box0_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="3"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="3"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-box box1">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box1_question0">Ufna, entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box1_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box1_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box1_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box1_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box1_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box1_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box1_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box1_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box1_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box1_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box1_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="question-box-row">
+                        <div class="question-box box2">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box2_question0">Ufna, entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box2_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box2_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box2_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box2_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box2_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box2_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box2_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box2_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box2_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box2_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box2_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-box box3">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box3_question0">Ufna, entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box3_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box3_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box3_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box3_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box3_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box3_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box3_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box3_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box3_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box3_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box3_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="question-box-row">
+                        <div class="question-box box4">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box4_question0">Ufna, entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box4_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box4_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box4_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box4_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box4_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box4_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box4_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box4_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box4_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box4_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box4_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-box box5">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box5_question0">Ufna, entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box5_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box5_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box5_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box5_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box5_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box5_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box5_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box5_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box5_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box5_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box5_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="question-box-row">
+                        <div class="question-box box6">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box6_question0">Ufna, entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box6_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box6_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box6_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box6_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box6_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box6_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box6_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box6_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box6_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box6_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box6_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-box box7">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box7_question0">Ufna, entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box7_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box7_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box7_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box7_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box7_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box7_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box7_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box7_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box7_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box7_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box7_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="question-box-row">
+                        <div class="question-box box8">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box8_question0">Ufna, entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box8_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box8_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box8_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box8_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box8_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box8_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box8_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box8_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box8_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box8_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box8_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-box box9">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box9_question0">Ufna, entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box9_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box9_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box9_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box9_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box9_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box9_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box9_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box9_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box9_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box9_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box9_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="question-box-row">
+                        <div class="question-box box10">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box10_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box10_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box10_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box10_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box10_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box10_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box10_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box10_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box10_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box10_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box10_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box10_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-box box11">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box11_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box11_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box11_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box11_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box11_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box11_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box11_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box11_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box11_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box11_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box11_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box11_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="question-box-row">
+                        <div class="question-box box12">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box12_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box12_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box12_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box12_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box12_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box12_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box12_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box12_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box12_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box12_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box12_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box12_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-box box13">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box13_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box13_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box13_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box13_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box13_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box13_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box13_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box13_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box13_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box13_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box13_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box13_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="question-box-row">
+                        <div class="question-box box14">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box14_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box14_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box14_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box14_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box14_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box14_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box14_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box14_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box14_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box14_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box14_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box0_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-box box15">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box15_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box15_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box15_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box15_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box15_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box15_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box15_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box15_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box15_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box15_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box15_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box15_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="question-box-row">
+                        <div class="question-box box16">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box16_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box16_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box16_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box16_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box16_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box16_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box16_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box16_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box16_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box16_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box16_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box16_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-box box17">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box17_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box17_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box17_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box17_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box17_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box17_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box17_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box17_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box17_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box17_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box17_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box17_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="question-box-row">
+                        <div class="question-box box18">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box18_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box18_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box18_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box18_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box18_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box18_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box18_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box18_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box18_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box18_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box18_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box18_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-box box19">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box19_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box19_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box19_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box19_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box19_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box19_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box19_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box19_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box19_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box19_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box19_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box19_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="question-box-row">
+                        <div class="question-box box20">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box20_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box20_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box20_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box20_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box20_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box20_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box20_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box20_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box20_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box20_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box20_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box20_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-box box21">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box21_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box21_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box21_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box21_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box21_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box21_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box21_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box21_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box21_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box21_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box21_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box21_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div class="question-box-row">
+                        <div class="question-box box22">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box22_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box22_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box22_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box22_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box22_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box22_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box22_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box22_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box22_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box22_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box22_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box22_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-box box23">
+                            <div class="question-row row0">
+                                <div class="question-text language-text" id="test_box23_question0">Ufna,
+                                    entuzjastyczna
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box23_question0.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box23_question0.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row1">
+                                <div class="question-text language-text" id="test_box23_question1">Tolerancyjna, pełna
+                                    szacunku
+                                </div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box23_question1.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box23_question1.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row2">
+                                <div class="question-text language-text" id="test_box23_question2">Odważna, śmiała</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box23_question2.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box23_question2.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="question-row row3">
+                                <div class="question-text language-text" id="test_box23_question3">Zgodna, uczynna</div>
+                                <div class="answer-box answer-box-left">
+                                    <img class="answer-icon icon-yes not-selected"
+                                         data-val="#{test_box23_question3.most.value}"
+                                         src="content/icons/icon-yes.png"/>
+                                </div>
+                                <div class="answer-box answer-box-right">
+                                    <img class="answer-icon icon-no not-selected"
+                                         data-val="#{test_box23_question3.least.value}"
+                                         src="content/icons/icon-no.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="button" class="btn btn-outline-secondary save-test-button">finish test</button>
+            </div>
+        </div>
+        <div class="results-content results-box">
+            <img id="results-box-most-picture"/>
+            <br/><br/>
+            <img id="results-box-least-picture"/>
+            <canvas id="results-box-most" class="chart-canvas"></canvas>
+            <br/><br/>
+            <canvas id="results-box-least" class="chart-canvas"></canvas>
+        </div>
+    </div>
+    <div id="footer"></div>
+</div>
+</body>
+</html>
