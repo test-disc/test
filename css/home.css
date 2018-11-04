@@ -4,10 +4,6 @@ body {
     font-weight: 500;
 }
 
-.test-box {
-    width: 60vw;
-}
-
 .btn.disabled, .btn:disabled {
     opacity: 0.25;
 }
@@ -32,15 +28,31 @@ body {
     margin-top: 20px;
 }
 
-.question-box-row {
+.button-container {
+    flex-direction: column;
+    align-items: center;
 }
 
+.error-box {
+    margin-bottom: 20px;
+    color: red;
+}
+
+.instructions-box,
 .question-box {
-    width: 500px;
     border: 1px solid silver;
     border-radius: 20px;
     box-sizing: border-box;
     padding: 25px;
+}
+
+#instructions_title {
+    font-weight: 700;
+}
+
+.instructions-text:not(:first-child),
+.instructions-text:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 .question-box.missing-answers {
@@ -74,7 +86,7 @@ body {
 }
 
 .answer-icon {
-    height: 35px;
+    height: 40px;
 }
 
 .save-test-button {
@@ -110,4 +122,8 @@ body {
 .button-disabled {
     opacity: 0.25;
     cursor: not-allowed;
+}
+
+.error-box {
+    display: none;
 }

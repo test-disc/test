@@ -109,9 +109,11 @@ $(function ($) {
                     $(el).removeClass('missing-answers')
                 }
             });
+            $('#error-box').show();
             return;
         } else {
-            $('.question-box.missing-answers').removeClass('missing-answers')
+            $('.question-box.missing-answers').removeClass('missing-answers');
+            $('#error-box').hide();
         }
 
         addValues(leastMap, mostMap);
@@ -124,14 +126,14 @@ $(function ($) {
     });
 
     function addValues(leastMap, mostMap) {
-        $('#red-most-value').val(getMostRed(mostMap.get(1)));
-        $('#yellow-most-value').val(getMostYellow(mostMap.get(2)));
-        $('#green-most-value').val(getMostGreen(mostMap.get(3)));
-        $('#blue-most-value').val(getMostBlue(mostMap.get(4)));
-        $('#red-least-value').val(getLeastRed(leastMap.get(1)));
-        $('#yellow-least-value').val(getLeastYellow(leastMap.get(2)));
-        $('#green-least-value').val(getLeastGreen(leastMap.get(3)));
-        $('#blue-least-value').val(getLeastBlue(leastMap.get(4)));
+        $('#red-most-value').val(getMostRed(isNaN(mostMap.get("1")) ? 0 : mostMap.get("1")));
+        $('#yellow-most-value').val(getMostYellow(isNaN(mostMap.get("2")) ? 0 : mostMap.get("2")));
+        $('#green-most-value').val(getMostGreen(isNaN(mostMap.get("3")) ? 0 : mostMap.get("3")));
+        $('#blue-most-value').val(getMostBlue(isNaN(mostMap.get("4")) ? 0 : mostMap.get("4")));
+        $('#red-least-value').val(getLeastRed(isNaN(leastMap.get("1")) ? 0 : leastMap.get("1")));
+        $('#yellow-least-value').val(getLeastYellow(isNaN(leastMap.get("2")) ? 0 : leastMap.get("2")));
+        $('#green-least-value').val(getLeastGreen(isNaN(leastMap.get("3")) ? 0 : leastMap.get("3")));
+        $('#blue-least-value').val(getLeastBlue(isNaN(leastMap.get("4")) ? 0 : leastMap.get("4")));
     }
 
     function changeSelection(selection, isYes) {
@@ -280,22 +282,22 @@ function getMostGreen(selected) {
 
 function getMostBlue(selected) {
     var map = new Map();
-    /*    map.set(15, 100.0);
-        map.set(14, 95.82);
-        map.set(13, 95.82);
-        map.set(12, 95.82);
-        map.set(11, 95.82);
-        map.set(10, 95.82);
-        map.set(9, 95.82);
-        map.set(8, 92.14);
-        map.set(7, 88.45);
-        map.set(6, 77.40);
-        map.set(5, 67.20);
-        map.set(4, 56.76);
-        map.set(3, 44.47);
-        map.set(2, 33.66);
-        map.set(1, 15.60);
-        map.set(0, 00.00);*/
+    map.set(15, 100.0);
+    map.set(14, 95.82);
+    map.set(13, 95.82);
+    map.set(12, 95.82);
+    map.set(11, 95.82);
+    map.set(10, 95.82);
+    map.set(9, 95.82);
+    map.set(8, 92.14);
+    map.set(7, 88.45);
+    map.set(6, 77.40);
+    map.set(5, 67.20);
+    map.set(4, 56.76);
+    map.set(3, 44.47);
+    map.set(2, 33.66);
+    map.set(1, 15.60);
+    map.set(0, 0.0);
     return map.get(selected);
 }
 
