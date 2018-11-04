@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="test-container row">
-                <div class="instructions-container col-lg-10 form-group col-md-10">
+                <div class="instructions-container col-lg-8 form-group col-md-8">
                     <div class="row">
                         <div class="col-12">
                             <div class="instructions-box">
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="test-box col-lg-10 col-md-10">
+                <div class="test-box col-lg-6 col-md-6">
                     <div class="question-box-row row">
                         <div class="col-lg-6 col-md-12 col-12 form-group box0">
                             <div class="question-box">
@@ -1680,22 +1680,28 @@
                 </div>
             </div>
         </div>
-        <div class="results-content results-box">
-            <input type="hidden" class="red most-value" id="red-most-value"/>
-            <input type="hidden" class="yellow most-value" id="yellow-most-value"/>
-            <input type="hidden" class="green most-value" id="green-most-value"/>
-            <input type="hidden" class="blue most-value" id="blue-most-value"/>
-            <input type="hidden" class="red least-value" id="red-least-value"/>
-            <input type="hidden" class="yellow least-value" id="yellow-least-value"/>
-            <input type="hidden" class="green least-value" id="green-least-value"/>
-            <input type="hidden" class="blue least-value" id="blue-least-value"/>
+        <div class="row">
+            <div class="results-content results-box col-lg-12 col-md-12">
+                <div class="row justify-content-md-center">
+                    <div class="col-lg-6 col-md-12 col-12 form-group">
+                        <input type="hidden" class="red most-value" id="red-most-value"/>
+                        <input type="hidden" class="yellow most-value" id="yellow-most-value"/>
+                        <input type="hidden" class="green most-value" id="green-most-value"/>
+                        <input type="hidden" class="blue most-value" id="blue-most-value"/>
+                        <input type="hidden" class="red least-value" id="red-least-value"/>
+                        <input type="hidden" class="yellow least-value" id="yellow-least-value"/>
+                        <input type="hidden" class="green least-value" id="green-least-value"/>
+                        <input type="hidden" class="blue least-value" id="blue-least-value"/>
 
-            <img id="results-box-most-picture"/>
-            <br/><br/>
-            <img id="results-box-least-picture"/>
-            <canvas id="results-box-most" class="chart-canvas"></canvas>
-            <br/><br/>
-            <canvas id="results-box-least" class="chart-canvas"></canvas>
+                        <img id="results-box-most-picture"/>
+                        <br/><br/>
+                        <img id="results-box-least-picture"/>
+                        <canvas id="results-box-most" class="chart-canvas"></canvas>
+                        <br/><br/>
+                        <canvas id="results-box-least" class="chart-canvas"></canvas>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="footer"></div>

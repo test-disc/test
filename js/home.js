@@ -99,7 +99,7 @@ $(function ($) {
             answered = answered + 1;
         });
 
-        if (answered !== 48) {
+       /* if (answered !== 48) {
             $('.question-box').each(function (index, el) {
                 var selected = $(el).find('.selected');
                 if ($(selected).length < 2) {
@@ -113,14 +113,14 @@ $(function ($) {
         } else {
             $('.question-box.missing-answers').removeClass('missing-answers');
             $('#error-box').hide();
-        }
+        }*/
 
         addValues(leastMap, mostMap);
 
         var testContent = $('.test-content');
         var resultContent = $('.results-content');
         testContent.empty();
-        $(resultContent).css("display", "flex");
+        $(resultContent).css("display", "inline");
         showCharts();
     });
 
@@ -197,9 +197,9 @@ $(function ($) {
         });
 
         function done() {
-            var pictureHolder = $(placeholder).attr('id') + '-picture';
+            /*var pictureHolder = $(placeholder).attr('id') + '-picture';
             $('#' + pictureHolder).attr('src', myChart.toBase64Image());
-            $(placeholder).css('display', 'none');
+            $(placeholder).css('display', 'none');*/
         }
     }
 });
