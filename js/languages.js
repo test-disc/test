@@ -1,15 +1,13 @@
 var arrLang = {
     "pl": {
+        "test_title":"Profil osobowości DISC",
         "instructions_title": "Instrukcja:",
-        "instructions_point0": "1. Zrelaksuj się i skup na zadaniu – to ważne. Odpowiadaj samodzielnie i szczerze. " +
-        "Dzięki rozwiązaniu poniższego testu dowiesz się, jakim typem osobowości jesteś.",
-        "instructions_point1": "2. Uważnie przeczytaj 4 stwierdzenia lub przymiotniki znajdujące się w każdym " +
-        "polu testu. Przy stwierdzeniu, które najlepiej opisuje Ciebie, kliknij ikonę kciuka w górę.",
-        "instructions_point2": "3. Przy stwierdzeniu, które najsłabiej opisuje Ciebie, kliknij ikonę kciuka w dół.",
-        "instructions_point3": "4. Dla każdego pola wybierz TYLKO JEDNO stwierdzenie z kolumny kciuków w górę i TYLKO" +
-        " JEDNO z kolumny kciuków w dół.",
-        "instructions_point4": "5. Rozwiązanie testu nie powinno zająć Ci więcej niż 5-7 minut, dlatego nie obawiaj " +
-        "się i wykonaj go, aby lepiej poznać siebie.",
+        "instructions_point0": "1. Dokładnie przeczytaj 4 stwierdzenia w każdym zestawie poniżej.",
+        "instructions_point1": "2. Dla każdego zestawu wybierz jeden kciuk do góry oznaczający stwierdzenia " +
+        "NAJLEPIEJ Cię opisujące w danym zestawie i jeden kciuk w dół oznaczający stwierdzenia NAJMNIEJ pasujące " +
+        "do Ciebie w danym zestawie.",
+        "instructions_point2": "3. Na koniec otrzymasz wynik. Jeśli chcesz go zachować i dowiedzieć się więcej " +
+        "zapisz go. My nie przechowujemy Twoich danych!",
 
         "test_box0_question0": "Ufna, entuzjastyczna",
         "test_box0_question1": "Tolerancyjna, pełna szacunku",
@@ -132,20 +130,18 @@ var arrLang = {
         "test_box23_question3": "Odnosi się do wzorców, działa według standardów",
 
         "error-box": "Nie odpowiedziałaś na wszystkie pytania!",
-        "save-test-button": "Zakończ test!"
+        "save-test-button": "Zakończ test!",
+        "disclaimer-text": "Jeśli chcesz uzyskać więcej informacji o wynikach swojego testu prześlij wiadomość ze " +
+        "screenami wyniku testu na: "
     },
     "en": {
+        "test_title":"DISC Personality Profile",
         "instructions_title": "Instructions:",
-        "instructions_point0": "1. Choose the setting in which your responses will be made: Work, home, church, " +
-        "social, etc.",
-        "instructions_point1": "2. Carefully read the four phrases in each box below. Click the thumb-up icon " +
-        "adjacent to the phrase MOST descriptive of you in the setting you have chosen.",
-        "instructions_point2": "3. Click the thumb-down adjacent to the phrase that is LEAST descriptive of you in " +
-        "the setting you have chosen.",
-        "instructions_point3": "4. For each box, choose ONLY ONE \"Most\" and ONLY ONE \"Least\" " +
-        "response.",
-        "instructions_point4": "5. This sheet should be completed within SEVEN MINUTES, or as close to that " +
-        "as possible.",
+        "instructions_point0": "1. Carefully read the four phrases in each box below.",
+        "instructions_point1": "2. For each box choose one thumb up for the MOST descriptive of you in the setting " +
+        "and one thumb down for the LEAST descriptive of you in the setting..",
+        "instructions_point2": "3. At the end you will get the result. If you would like to keep it for further " +
+        "review save it. We do not gather your data!",
 
         "test_box0_question0": "Trusting, Enthusiastic",
         "test_box0_question1": "Tolerant, Respectful",
@@ -268,6 +264,8 @@ var arrLang = {
         "test_box23_question3": "High standards, Looks to benchmarks",
 
         "error-box": "Not all questions are answered!",
-        "save-test-button": "Finish test!"
+        "save-test-button": "Finish test!",
+        "disclaimer-text": "If you want to get more information about your results, screenshot them and send " +
+        "the pictures to: ",
     }
 }

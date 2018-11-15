@@ -117,7 +117,7 @@ $(function ($) {
 
         addValues(leastMap, mostMap);
 
-        var testContent = $('.test-content');
+        var testContent = $('#test-container');
         var resultContent = $('.results-content');
         testContent.empty();
         $(resultContent).css("display", "inline");
