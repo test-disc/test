@@ -139,7 +139,7 @@ var arrLang = {
         "instructions_title": "Instructions:",
         "instructions_point0": "1. Carefully read the four phrases in each box below.",
         "instructions_point1": "2. For each box choose one thumb up for the MOST descriptive of you in the setting " +
-        "and one thumb down for the LEAST descriptive of you in the setting..",
+        "and one thumb down for the LEAST descriptive of you in the setting.",
         "instructions_point2": "3. At the end you will get the result. If you would like to keep it for further " +
         "review save it. We do not gather your data!",
 
