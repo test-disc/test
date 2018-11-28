@@ -99,7 +99,7 @@ $(function ($) {
             answered = answered + 1;
         });
 
-       /* if (answered !== 48) {
+        if (answered !== 48) {
             $('.question-box').each(function (index, el) {
                 var selected = $(el).find('.selected');
                 if ($(selected).length < 2) {
@@ -113,7 +113,7 @@ $(function ($) {
         } else {
             $('.question-box.missing-answers').removeClass('missing-answers');
             $('#error-box').hide();
-        }*/
+        }
 
         addValues(leastMap, mostMap);
 
