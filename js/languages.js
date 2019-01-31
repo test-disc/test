@@ -8,6 +8,8 @@ var arrLang = {
         "do Ciebie w danym zestawie.",
         "instructions_point2": "3. Na koniec otrzymasz wynik. Jeśli chcesz go zachować i dowiedzieć się więcej " +
         "zapisz go. My nie przechowujemy Twoich danych!",
+        
+        "person_title":"Jestem osobą, która:",
 
         "test_box0_question0": "Ufna, entuzjastyczna",
         "test_box0_question1": "Tolerancyjna, pełna szacunku",
@@ -142,6 +144,8 @@ var arrLang = {
         "and one thumb down for the LEAST descriptive of you in the setting.",
         "instructions_point2": "3. At the end you will get the result. If you would like to keep it for further " +
         "review save it. We do not gather your data!",
+        
+        "person_title":"I am the person who is:",
 
         "test_box0_question0": "Trusting, Enthusiastic",
         "test_box0_question1": "Tolerant, Respectful",
