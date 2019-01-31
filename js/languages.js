@@ -9,7 +9,7 @@ var arrLang = {
         "instructions_point2": "3. Na koniec otrzymasz wynik. Jeśli chcesz go zachować i dowiedzieć się więcej " +
         "zapisz go. My nie przechowujemy Twoich danych!",
         
-        "person_title":"Jestem osobą, która:",
+        "person_title":"Jestem osobą, która zwykle jest:",
 
         "test_box0_question0": "Ufna, entuzjastyczna",
         "test_box0_question1": "Tolerancyjna, pełna szacunku",
