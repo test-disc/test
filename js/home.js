@@ -2,8 +2,8 @@ $(function ($) {
 
     var languageButton = $('.language-button');
 
-    //translateTest("en");
-    //changeButtons($('.language-button-english'));
+    translateTest("pl");
+    changeButtons($('.language-button-polish'));
 
     $(languageButton).click(function () {
         if ($(this).hasClass('button-disabled'))
