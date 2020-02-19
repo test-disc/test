@@ -269,7 +269,7 @@ var arrLang = {
 
         "error-box": "Not all questions are answered!",
         "save-test-button": "Finish test!",
-        "disclaimer-text1": "If you want to get more information about your results, screenshot them and go to "
+        "disclaimer-text1": "If you want to get more information about your results, screenshot them and go to ",
         "disclaimer-text2": ""
     }
 }
