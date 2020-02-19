@@ -133,8 +133,8 @@ var arrLang = {
 
         "error-box": "Nie odpowiedziałaś na wszystkie pytania!",
         "save-test-button": "Zakończ test!",
-        "disclaimer-text": "Jeśli chcesz uzyskać więcej informacji o wynikach swojego testu prześlij wiadomość ze " +
-        "screenami wyniku testu na: "
+        "disclaimer-text": "Jeśli chcesz uzyskać więcej informacji na temat swojego testu wejdź na www.koodoo.pl. " + 
+        "Pamiętaj, żeby zrobić screen z wynikami testu!"
     },
     "en": {
         "test_title":"DISC Personality Profile",
@@ -269,7 +269,6 @@ var arrLang = {
 
         "error-box": "Not all questions are answered!",
         "save-test-button": "Finish test!",
-        "disclaimer-text": "If you want to get more information about your results, screenshot them and send " +
-        "the pictures to: ",
+        "disclaimer-text": "If you want to get more information about your results, screenshot them and go to www.koodoo.pl"
     }
 }
