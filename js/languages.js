@@ -133,7 +133,7 @@ var arrLang = {
 
         "error-box": "Nie odpowiedziałaś na wszystkie pytania!",
         "save-test-button": "Zakończ test!",
-        "disclaimer-text1": "Jeśli chcesz uzyskać więcej informacji na temat swojego testu wejdź na "
+        "disclaimer-text1": "Jeśli chcesz uzyskać więcej informacji na temat swojego testu wejdź na ",
         "disclaimer-text2": " Pamiętaj, żeby zrobić screen z wynikami testu!"
     },
     "en": {
