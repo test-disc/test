@@ -133,8 +133,10 @@ var arrLang = {
 
         "error-box": "Nie odpowiedziałaś na wszystkie pytania!",
         "save-test-button": "Zakończ test!",
-        "disclaimer-text1": "Jeśli chcesz uzyskać więcej informacji na temat swojego testu wejdź na ",
-        "disclaimer-text2": " Pamiętaj, żeby zrobić screen z wynikami testu!",
+        "disclaimer-text1": "Nie przechowujemy Twoich danych!",
+        "disclaimer-text2": "Jeśli chcesz zachować wynik – zapisz go! Możesz np. zachować zrzut ekranu (tzw. print screen) z wynikami testu.",
+        "disclaimer-text3": "Jeśli chcesz uzyskać więcej informacji na temat swojego wyniku wejdź na ",
+        "disclaimer-text4": " lub napisz do nas: ",
     },
     "en": {
         "test_title":"DISC Personality Profile",
@@ -269,7 +271,9 @@ var arrLang = {
 
         "error-box": "Not all questions are answered!",
         "save-test-button": "Finish test!",
-        "disclaimer-text1": "If you want to get more information about your results, screenshot them and go to ",
-        "disclaimer-text2": "",
+        "disclaimer-text1": "We do not store your data!",
+        "disclaimer-text2": "If you want your results - save them! You can do it by for example taking a screenshot of the result charts.",
+        "disclaimer-text3": "If you want to get more information regarding your results, go to ",
+        "disclaimer-text4": " or write an e-mail to us: ",
     }
 }
